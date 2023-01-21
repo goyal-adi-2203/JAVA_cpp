@@ -25,16 +25,18 @@ int main(){
     init_mat();
     disp_mat();
     plyr_choice();
-    
+
     do
     {
         plyr_turn();
         disp_mat();
         f = comp_turn();
         disp_mat();
-        if(f) break;
-
         f = check();
+
+        if(res == 'D'){
+            break;
+        }
     } while (!f);
     
     cout << res;
@@ -110,12 +112,12 @@ bool comp_turn(){
         for(int j = 0;j<3;j++){
             if (mat[i][j]=='.'){
                 mat[i][j]=comp;
-                res = 'D';
                 return false;
             }
         }
     }
 
+    res = 'D';
     return true;
 }
 
@@ -163,5 +165,6 @@ bool check(){
 
     return false;
 }
+
 
 
