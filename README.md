@@ -1,4 +1,1 @@
-# timepass
-personal projects done for learning
-and stuff
-
+Simple projects based on basic understanding of C++ and JAVA
